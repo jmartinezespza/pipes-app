@@ -29,4 +29,14 @@ export class NoComunesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cambiarCliente() {
+    this.nombre = "Jessica";
+    this.genero = "femenino";
+  }
+
+  borrarCliente() {
+    this.clientes.pop();
+    
+  }
+
 }
