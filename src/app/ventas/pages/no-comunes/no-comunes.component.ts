@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -46,4 +47,28 @@ export class NoComunesComponent implements OnInit {
     direccion: "Lims, Perú"
   }
 
+  // JsonPipe
+  heroes = [
+    { 
+      name: 'Superman', 
+      vuela: true
+    },
+    {
+      name: 'Batman',
+      vuela: false
+    },
+    {
+      name: 'Spiderman',
+      vuela: false
+    }
+  ]
+
+  // Async Pipe
+  miObservable = interval(2000); // 1,2,3,4,..
+
+  valorPromesa = new Promise(resolve => {
+    setTimeout(() => {
+      resolve("Tenemos respuesta de la promesa");
+    }, 3500);
+  });
 }
