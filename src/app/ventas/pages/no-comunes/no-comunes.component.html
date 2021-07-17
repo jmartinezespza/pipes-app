@@ -36,4 +36,30 @@
             ></button>
         </p-fieldset>
     </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <p>Originales</p>
+            <pre>{{clientes}}</pre>
+
+            <p>Slice:0:2</p>
+            <pre>{{clientes | slice:0:2}}</pre>
+
+            <p>Slice:1:2</p>
+            <pre>{{clientes | slice:1:2}}</pre>
+
+            <p>Slice:2:3</p>
+            <pre>{{clientes | slice:2:3}}</pre>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let item of persona | keyvalue">
+                    {{item.key}}: {{item.value}}
+                </li>
+            </ul>
+        </p-fieldset>
+    </div>
 </div>

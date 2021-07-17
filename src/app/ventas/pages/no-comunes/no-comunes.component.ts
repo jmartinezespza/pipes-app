@@ -16,7 +16,7 @@ export class NoComunesComponent implements OnInit {
   }
 
   // l10nPlural
-  clientes: string[] = ['Maria', 'Pedro', 'Juan']
+  clientes: string[] = ['Maria', 'Pedro', 'Juan', 'Alex']
   clientesMapa = {
     '=0': 'no tenemos ningún cliente esperando.',
     '=1': 'tenemos un cliente esperando.',
@@ -37,6 +37,13 @@ export class NoComunesComponent implements OnInit {
   borrarCliente() {
     this.clientes.pop();
     
+  }
+
+  // keyValuePipe
+  persona = {
+    nombre: "Jhonny",
+    edad: 31,
+    direccion: "Lims, Perú"
   }
 
 }
